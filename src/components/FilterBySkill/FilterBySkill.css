@@ -1,0 +1,38 @@
+.filter-criteria {
+  height: 30px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.criteria {
+  background-color: var(--light-filter-tablet);
+  border: 0;
+  padding: 0.5rem;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-weight: 600;
+  color: var(--Desaturated-Dark-Cyan);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.remove-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30px;
+  background-color: var(--Desaturated-Dark-Cyan);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.remove-icon:hover {
+  background-color: var(--very-dark-bg-cyan);
+}
+
+.remove-icon > img {
+  width: 13px;
+}
