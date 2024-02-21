@@ -1,13 +1,19 @@
 import React from 'react';
 import './FilterBySkill.css';
-import SkillBtn from '../Skills/Skills';
 import RemoveIcon from '../../assets/images/removeIcon.svg';
-
+import JobContext from '../../contexts/JobContext';
+import { useContext } from 'react';
 export default function FilterBySkill({ skill }) {
+  const { dispatch } = useContext(JobContext);
+
+  const handleClick = (e) => {
+    dispatch({ type: 'job/remove', payload: skill });
+  };
+
   return (
     <div className="filter-criteria">
       <span className="criteria">{skill}</span>
-      <span className="remove-icon">
+      <span className="remove-icon" onClick={handleClick}>
         <img src={RemoveIcon} alt="" />
       </span>
     </div>

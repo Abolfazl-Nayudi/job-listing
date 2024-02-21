@@ -1,0 +1,16 @@
+.search-bar {
+  background-color: white;
+  width: 500px;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar > div:first-child {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

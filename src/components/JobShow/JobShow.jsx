@@ -3,7 +3,7 @@ import React from 'react';
 import Skills from '../Skills/Skills';
 import inuser from '../../assets/images/insure.svg';
 export default function JobShow({ data }) {
-  console.log(data);
+  const skills = [data.role, data.level, ...data.tools, ...data.languages];
   return (
     <div className="card">
       <div className="body">
@@ -24,13 +24,8 @@ export default function JobShow({ data }) {
         </div>
       </div>
       <div className="skill-boxes">
-        <Skills skill={data.role} />
-        <Skills skill={data.level} />
-        {data.tools.map((language) => {
-          return <Skills skill={language} />;
-        })}
-        {data.languages.map((language) => {
-          return <Skills skill={language} />;
+        {skills.map((skill, index) => {
+          return <Skills skill={skill} key={index} />;
         })}
       </div>
     </div>
