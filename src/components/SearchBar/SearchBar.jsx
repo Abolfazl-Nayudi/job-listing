@@ -5,7 +5,11 @@ import JobContext from '../../contexts/JobContext';
 import './SearchBar.css';
 
 export default function SearchBar() {
-  const { state } = useContext(JobContext);
+  const { state, dispatch } = useContext(JobContext);
+
+  const handleClearClick = (e) => {
+    dispatch({ type: 'job/removeAllFilterCriteria' });
+  };
 
   return (
     <section className="search-bar">
@@ -14,7 +18,9 @@ export default function SearchBar() {
           return <FilterBySkill skill={job} key={index} />;
         })}
       </div>
-      <div className="clear">clear</div>
+      <div className="clear" onClick={handleClearClick}>
+        clear
+      </div>
     </section>
   );
 }

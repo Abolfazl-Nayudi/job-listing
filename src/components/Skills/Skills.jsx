@@ -10,7 +10,10 @@ export default function Skills({ skill }) {
       (skill) => skill === e.target.textContent
     );
     if (!isSkillExists) {
-      dispatch({ type: 'job/add', payload: e.target.textContent });
+      dispatch({
+        type: 'job/addFilterCriteria',
+        payload: e.target.textContent,
+      });
     }
   };
 

@@ -7,7 +7,7 @@ export default function FilterBySkill({ skill }) {
   const { dispatch } = useContext(JobContext);
 
   const handleClick = (e) => {
-    dispatch({ type: 'job/remove', payload: skill });
+    dispatch({ type: 'job/removeFilterCriteria', payload: skill });
   };
 
   return (

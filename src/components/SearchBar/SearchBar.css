@@ -14,3 +14,13 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.clear {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.clear:hover {
+  color: var(--Desaturated-Dark-Cyan);
+  text-decoration: underline;
+}
